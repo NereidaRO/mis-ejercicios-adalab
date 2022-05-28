@@ -2,3 +2,4 @@ Prueba de comandos de GIT
 
 Esta es la primera versión. Se ha subido haciendo un .git nuevo y en una rama nueva en github
 Esta línea representa la segunda versión.
+tercera versión pero sin subirse la segunda porque git me crea una rama por versión, socorro
