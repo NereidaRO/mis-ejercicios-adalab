@@ -21,3 +21,5 @@ git push (te pusheará en la rama que has creado)
 (ojo, git merge fusiona ramas pero sin eliminar las originales)
 
 aun así, estaría bien preguntarles a las profesoras de Adalab cuando empiece el bootcamp :(
+
+Ahora voy a hacer un cambio pequeño para aprender a borrar.
