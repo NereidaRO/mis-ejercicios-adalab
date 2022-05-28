@@ -5,3 +5,19 @@ Esta línea representa la segunda versión.
 tercera versión pero sin subirse la segunda porque git me crea una rama por versión, socorro
 
 Versión cuatro o por ahí, ahora GitHub me ha pedido permisos, ¿sería eso lo que faltaba?
+
+pues sí, lo ha sido. Gracias a HolaMundo. 
+
+Comandos necesarios: git branch (para saber en qué rama estás)
+git log --oneline (para saber por donde vas)
+git add . y git commit -m "mensajito" as starring guests
+git remote add origin URLREPOSITORIO
+git push -u origin ramaquequierescrear
+
+haces los cambios que veas
+
+git push (te pusheará en la rama que has creado)
+
+(ojo, git merge fusiona ramas pero sin eliminar las originales)
+
+aun así, estaría bien preguntarles a las profesoras de Adalab cuando empiece el bootcamp :(
