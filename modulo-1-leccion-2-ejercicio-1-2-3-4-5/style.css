@@ -1,0 +1,40 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+.cien{
+    background-color: #f0f;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: block;
+   /* display: inline;
+    display: inline-block; */
+}
+
+.beach{
+    width: 100px;
+    height: 100px;
+} /*como está dentro de la etiqueta p, pasa por defecto a estar en display block; si estuviera suelta, sería inline por defecto*/
+
+.doscien{
+    width: 200px;
+    height: 200px;
+} /*no aparece ningún display por defecto, aunque en la teoría dice que las etiquetas img son inline*/
+
+.ajuste-img{
+    width: 100px;
+    height: 100px;
+}
+
+.div-ajuste-img{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 5px;
+    box-sizing: border-box; /*se mueve un poco pero no sé qué pasa*/
+    margin-left: auto;
+    margin-right: auto;
+}
