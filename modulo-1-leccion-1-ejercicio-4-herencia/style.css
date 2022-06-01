@@ -1,0 +1,11 @@
+.links{
+    color: red;
+} /*quedará en rojo todo lo que esté en o bajo aside*/
+
+.body{
+    font-size: 18px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    color: rebeccapurple;
+    background-color: mediumpurple;
+    line-height: 1.5cm;
+}
