@@ -10,7 +10,7 @@ img{
 }
 
 .container{
-   width: 200px;
+   width: 100vw; /*habias puesto imagenes más grandes que el contenedor (por los másrgenes*/
    height: 100px; 
     display: flex;
     flex-direction: row;
