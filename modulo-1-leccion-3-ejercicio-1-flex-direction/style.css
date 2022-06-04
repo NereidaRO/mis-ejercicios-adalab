@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column
+}
+
+p{
+    background-color: plum;
+    color:black;
+    border: 1px;
+    border-style: solid; /*siempre hay que poner estilo o no lo dibuja*/
+    border-color: black;
+    margin: 5px;
+}

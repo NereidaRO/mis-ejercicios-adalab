@@ -1,0 +1,1 @@
+se deben quedar las imágenes en varias filas e ir moviendose en funcion del tamaño de pantalla

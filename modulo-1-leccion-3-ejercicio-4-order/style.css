@@ -1,0 +1,30 @@
+
+p{
+    width: 50%;
+}
+
+img{
+    width: 50%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 3;
+}
+
+.col2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 3;
+}
+
+.destacada{
+    order: 1;
+    width: 100vw
+}
