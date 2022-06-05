@@ -1,0 +1,17 @@
+.cabecera{
+    background-color: purple;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+main{
+ position: relative;
+ top: 5vw;
+}
+
+/*con absolute, right manda a la derecha, top, arriba, etc.*/
+/*se toma como referente el valor del primer contenedor padre con una posición diferente a static*/
+/*z-index solo puede usarse con elementos que no tengan posición static*/
+/*mayor z-index, más encima está*/

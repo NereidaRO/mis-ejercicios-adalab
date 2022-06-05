@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.div1, .div2, .div3{
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    padding: 30px;
+}
+
+.div1{
+    background-color: magenta;
+    position: relative;
+    top: 50px;
+    bottom: 0;
+    right: 0;
+    left: 100px;
+}
+
+.div2{
+    background-color: blueviolet;
+    position: relative;
+    top: 0;
+    bottom: 320px;
+    right: 150px;
+    left: 0;
+}
+
+.div3{
+    background-color: blue;
+    position: relative;
+    top: 0;
+    bottom: 240px; /*no lo mueve hacia arriba :( XQ?*/
+    right: 0;
+    left: 180px;
+}
+
+/*en relative, si pones algún valor 0, lo tomará como el valor que tendría en static*/
+
+/*right: de derecha a izq
+left: de izq a dcha
+top: arriba a abajo
+botton: abajo a arriba*/
+
+/*left prevalece sobre right, top prevalece sobre bottom*/
