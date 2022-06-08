@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    width: 100%; /*para que la barra de scroll no tape*/
+    height: 10vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row; /*default, no hace falta*/
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ul{
+    text-decoration: none;
+    display: flex;
+    gap: 6%;
+}
+
+.mi-blog{
+    font-size: 200%;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.mito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.parrafo{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.footer{
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid grey 1px;
+    background-color: white;
+    position: sticky;
+    bottom: 0;
+}
+
+/*Ahora a por la ventana modal*/
+
+.wrapper-modal{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo{
+    position: fixed;
+    width: 100vw;
+   height: 100vh;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje{
+    position: fixed;
+    top: 25%;
+    left: 30%;
+    background-color: white;
+    width: 40%;
+    height: 50%;
+    opacity: 1;
+    text-align: center;
+    z-index:999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hola{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.newsletter{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.rechazar{
+    border-radius: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+
+.suscribirse{
+    border-radius: 10%;
+    background-color: black;
+    color: white;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+/*div, div, div, div*/
+/*la carga semántica es por los buscadores y la accesibilidad*/

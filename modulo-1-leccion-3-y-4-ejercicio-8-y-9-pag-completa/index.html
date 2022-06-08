@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página con aviso</title>
-    <link rel="stylesheet" href="./style.css">
+    <!--<link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
+    <div class="wrapper-modal">
+        <div class="fondo">
+        </div> <!--Así cubre la cabecera también :)-->
 
-    <div class="aviso">
-
-            <div class="mensaje">
-                <h1 class="hola">¡Hola!</h1>
-                <p class="newsletter">Suscríbete a nuestra newsletter para estar al día de nuestras noticias</p>
+        <div class="mensaje">
+            <h1 class="hola">¡Hola!</h1>
+            <p class="newsletter">Suscríbete a nuestra newsletter para estar al día de nuestras noticias</p>
+            <div class="buttons">
                 <button class="rechazar">Rechazar</button>
                 <button class="suscribirse">Suscribirse</button>
-            </div>
-    </div> <!--Así cubre la cabecera también :)-->
+             </div>
+        </div>
+    </div>
 
-    <header class="cabecera">
+    <header class="header">
         <p class="mi-blog">Mi blog</p>
 
         <nav class="barra-nav">
-            <ul>
+            <ul class="ul">
                 <li>Inicio</li>
                 <li>Archivo</li>
                 <li>Contacto</li>
@@ -31,17 +35,19 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main">
 
     <section class="contenido"> <!--hacer una sección de info y otra con título y mito-->
-        <p class="ovidio">Ovidio</p>
+        <div class="info">
+            <p class="ovidio">Ovidio</p>
 
-        <p class="fecha">siglo I a.C</p>
+            <p class="fecha">siglo I a.C</p>
+        </div>
 
-        <section class="mito">
+        <article class="mito">
         <h1 class="titulo">Dédalo e Ícaro</h1>
 
-        <p>Dédalo entre tanto, por Creta y su largo exilio		
+        <p class="parrafo">Dédalo entre tanto, por Creta y su largo exilio		
             lleno de odio, y tocado por el amor de su lugar natal,		
             encerrado estaba en el piélago. «Aunque tierras», dice, «y ondas
             me oponga, mas el cielo ciertamente se abre; iremos por allá.		
@@ -95,10 +101,10 @@
             y maldijo sus propias artes, y su cuerpo en un sepulcro		
             encerró, también tierra por el nombre dicha del sepultado.	 	
             </p>
-        </section>
+        </article>
     </section>
     </main>
-    <footer class="pie">
+    <footer class="footer">
         <p class="copy">&copy Biblioteca Virtual Miguel de Cervantes</p>
 
         <p class="redes">Twitter Instagram GitHub</p>
