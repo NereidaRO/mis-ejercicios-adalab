@@ -1,0 +1,34 @@
+/*Aunque es el partial del main, no puedes llamarlo main porque ya hay un SCSS llamado así*/
+
+/*Este main no tiene nada interesante, son 4 bloques ahí para abajo, pero usaré este SCSS para hacer la parte de grid*/
+
+/*La idea es poner en header, main y aside en un contenedor y desplazarlos con grid en la versión para tablet*/
+
+.main {
+    margin: 3%;
+
+    .article {
+        margin: 3%;
+    }
+}
+
+.wrapper {
+    @media all and (min-width: 768px) {
+        display: grid;
+        grid-template-areas: 'header aside''main aside';
+        grid-gap: 10px;
+
+        .header {
+            grid-area: header;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .aside {
+            grid-area: aside;
+        }
+
+    }
+}

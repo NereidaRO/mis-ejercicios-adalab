@@ -1,0 +1,20 @@
+.header {
+    /*con flex*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    border-bottom: 1px solid $color-secondary;
+
+    &__img {
+        width: 150px;
+        height: 75px;
+    }
+
+    @media all and (min-width: 768px) {
+        align-items: flex-start;
+        margin-left: 1%;
+        /*funciona*/
+    }
+}

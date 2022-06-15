@@ -1,0 +1,49 @@
+/*con grid*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.aside {
+    display: grid;
+    grid-template-areas: 'text navi';
+    grid-gap: 5%;
+
+    &__wrapper {
+        grid-area: text;
+    }
+
+    &__nav {
+        grid-area: navi;
+    }
+
+    &__ul {
+        list-style: none;
+    }
+
+    &__li--space {
+        margin-bottom: 5%;
+    }
+
+    @media all and (min-width: 768px) {
+        .aside {
+            grid-template-areas: 'one''two';
+            transform: translate(10px, -72px);
+        }
+
+        &__wrapper {
+            grid-area: one;
+        }
+
+        &__nav {
+            grid-area: two;
+            margin-top: 100%;
+            margin-bottom: 5%;
+        }
+
+        &__par {
+            margin-bottom: 10%;
+        }
+    }
+}
