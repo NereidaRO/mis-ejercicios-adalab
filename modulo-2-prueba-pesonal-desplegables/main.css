@@ -1,0 +1,11 @@
+.one, .two, .three{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.one__title, .two__title, .three__title{
+    font-size: 24px;
+}
+
+.hidden{
+    display: none;
+}
