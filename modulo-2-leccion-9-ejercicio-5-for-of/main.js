@@ -1,26 +1,37 @@
 'use strict';
 
-const bookOne = document.querySelector('.js-firstbook');
-const bookTwo = document.querySelector('.js-secondbook');
-const button = document.querySelector('.js-button');
+const bookOne = document.querySelector('.js-firstbook'); //es el input
+const bookTwo = document.querySelector('.js-secondbook'); //es el otro input
+const button = document.querySelector('.js-button'); //es un input submit
+const result = document.querySelector('.js-result'); //es un párrafo vacío
 
-const valueOne = bookOne.value;
-const valueTwo = bookTwo.value;
+
 
 const bookList = [];
 
+
 console.log("hola");
+
+function addArrayElement(book){
+    bookList.push(book);
+};
 
 function handleClick(event){
     event.preventDefault();
-    bookList[0] = valueOne;
-    bookList[1] = valueTwo;
+    const valueOne = bookOne.value;
+    const valueTwo = bookTwo.value;
+    addArrayElement(valueOne);
+    addArrayElement(valueTwo);
     console.log(bookList);
-    return bookList;
-}; //no le mete los valores
+    for (let book of bookList) {
+        console.log(`También he leído ${book}`);
+        result.innerHTML += (`También he leído ${book}. `);
+      };
+}; //cuidado con los valores default
 
 button.addEventListener('click', handleClick);
 
-/*for (const book of bookList) {
-    console.log(`${book} was nominated to 89th Academy Awards`);
-  };*/
+//SINTAXIS
+//for(variable of iterable{sentencia};)
+
+

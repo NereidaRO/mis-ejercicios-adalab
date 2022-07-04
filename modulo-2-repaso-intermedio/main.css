@@ -1,0 +1,42 @@
+/*Maquetación*/
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.main__paragraph{
+    font-size: 180px;
+}
+
+.main__select{
+    border-radius: 3px;
+}
+
+.main__button{
+    background-color: cornflowerblue;
+    border-radius: 3px;
+    color: white;
+    border: none;
+}
+
+/*clases para cambios en JS*/
+
+.main-yellow{
+    background-color: #ffcc00;
+}
+
+.main-orange{
+    background-color: #ff9900;
+}
