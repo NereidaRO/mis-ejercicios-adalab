@@ -28,6 +28,8 @@ function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
+  /*el adalabo recomienda poner la cuenta en return 
+  y la cte después de llamar a la función*/
   //The maximum is inclusive and the minimum is inclusive
   //Source: MDN
 };
@@ -44,9 +46,9 @@ function handleClick(ev){
     paragraph.innerHTML = valueHappy;
   } else {
     paragraph.innerHTML = valueSad;
-  }
+  } //este segundo if puede ser solo un "pintame esto", sin if
 };
 
 button.addEventListener('click',handleClick);
 
-//funciona!
+//repásala, siempre pone carita triste!
