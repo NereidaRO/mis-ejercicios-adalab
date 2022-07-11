@@ -52,3 +52,13 @@ const welcomePremium = premiumUser.map(
 console.log("ejercico3", premiumUser);
 console.log(welcomePremium);*/
 //*******************************************************************************************
+//Mónica
+//Con desestructurar objeto
+/*const messages=users.map(({name, isPremium})=>{
+  if (isPremium===true){
+    return {saludo: (`Bienvenida ${name}. Gracias por confiar en nosotros.`)};
+
+  }else{
+        return {saludo:(`Bienvenida ${name}.`)};
+  }
+});*/
