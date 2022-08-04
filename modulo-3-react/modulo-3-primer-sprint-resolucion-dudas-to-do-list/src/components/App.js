@@ -2,15 +2,22 @@ import '../styles/App.scss';
 import {useState} from 'react';
 import { uuid } from '../services/utils';
 import originalTasks from '../data/tasks.json';
+//todo esto qué es y de dónde sale? No lo veo en el vídeo T-T
 
 function App() {
 
-  const [isFormShown, setIsFormShown] = useState(false); //no empieza con hidden!
-  const [tasks, setTasks] = useState(tasksWithIds);
+  //VARIABLES DE ESTADO
+
+  const [isFormShown, setIsFormShown] = useState(false); //no empieza con el formulario oculto!
+  const [tasks, setTasks] = useState(tasksWithIds); //qué es esto? No lo veo en el vídeo
   const [newTask, setNewTask] = useState('');
+
+  //VARIABLES AUXILIARES
 
   let showButtonClass = isFormShown === false ? '' : 'hidden' ;
   let showFormClass = isFormShown === true ? '' : 'hidden' ;
+
+  //FUNCIONES MANEJADORAS
 
   const handleClick = (ev) => {
     ev.preventDefault(); //¿esto se pone en React?
@@ -20,83 +27,30 @@ function App() {
     } else {
       setIsFormShown(true);
     } //¡tampoco va con la forma mala!
-    //el segundo video no está T-T
   };
 
-  //-------------
-  //AQUÍ COMIENZA EL COPYPASTE
-
-  const handleClickTask = (ev) => {
-    const clickedTaskId = ev.currentTarget.dataset.id;
-     // Dos formas de hacerlo:
-
-    // Una forma
-    const taskData = tasks.find((eachTaskObj) => eachTaskObj.id === clickedTaskId);
-
-    taskData.completed = !taskData.completed;
-
-    setTasks([...tasks]);
-    /*
-    // Otra forma:
-        const clonedTasks = tasks.map((eachTaskObj) => {
-      if (eachTaskObj.id === clickedTaskId) {
-        return { ...eachTaskObj, completed: !eachTaskObj.completed };
-      } else {
-        return eachTaskObj;
-      }
-    });
-
-    setTasks(clonedTasks);
-    */
+  const handleTaskData = (ev) => {
+    const taskData = tasks[ev.currentTarget.id]; //vale, ¿pero esto para qué sirve? El vídeo corta esto
   };
 
   const handleChangeNewTask = (ev) => {
-    const valueWritten = ev.currentTarget.value;
-
-    setNewTask(valueWritten);
+    setNewTask(ev.currentTarget.value);
   };
 
   const handleClickSaveNewTask = (ev) => {
-    // 1. Cree una una nueva tarea
+    //crear nueva tarea
+    const newTaskObj = {task: {newTask}, completed: false}
+    const tasksCloned = [...tasks, newTaskObj] //todo lo que tenía el array tasks + lo nuevo
+    setTasks(tasksCloned); //también se puede compactar -> poner lo que hay en tasksCloned dentro de los paréntesis de setTasks
 
-    const newTaskObject = { id: uuid(), task: newTask, completed: false };
-
-    // tasks.push( newTaskObject ); --> NOOO CACA!
-
-    const tasksCloned = [...tasks, newTaskObject];
-
-    setTasks(tasksCloned);
-
-    // 2. Borrar el value del input
-
+    //limpiar el input
     setNewTask('');
 
-    // 3. Ocultar el formulario
-
+    //ocultar el formulario
     setIsFormShown(false);
   };
 
-  const calculateTaskClass = (eachTaskObj) => {
-    if (eachTaskObj.completed === true) {
-      return 'completed';
-    } else {
-      return '';
-    }
-  };
-
-  const tasksHTML = tasks.map((eachTaskObj) => (
-    <li key={eachTaskObj.id} className={'task ' + calculateTaskClass(eachTaskObj)}>
-      <input
-        type="checkbox"
-        name={`task-${eachTaskObj.id}`}
-        id={`task-${eachTaskObj.id}`}
-        data-id={eachTaskObj.id}
-        checked={eachTaskObj.completed}
-        onChange={handleClickTask}
-      />
-      <p>{eachTaskObj.task}</p>
-    </li>
-  ));
+  //RETURN
 
   return (
     <div className="page">
@@ -105,10 +59,10 @@ function App() {
       </header>
       <main className="main">
         <ul className="main__list">
-        {tasksHTML}
+        {tasksHTML} {/* entiendo para qué sirve pero ¿de dónde sale? ni siquiera hay algo que se llame así*/}
         </ul>
         <button className={"main__button " + {showButtonClass}} onClick ={handleClick}>Nueva tarea</button>
-        <form className={`form ${showFormClass}`} action="">
+        <form className={`main__form ${showFormClass}`} action="">
           <h2 className="form__title">Añade una nueva tarea</h2>
           <label htmlFor="newText" className="form__label">
             Describe tu tarea:
@@ -130,5 +84,7 @@ function App() {
     </div>
   );
 }
+
+//última duda: ¿cómo cambia el checked? No lo veo en el código ni en el vídeo
 
 export default App;

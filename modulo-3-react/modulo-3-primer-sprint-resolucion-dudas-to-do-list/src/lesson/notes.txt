@@ -1,3 +1,15 @@
+NOTA: antes de empezar, recuerda que React usa estas palabras: defaultChecked (checked), className (class) y
+htmlFor (for).
+
+ENUNCIADO:
+
+Queremos hacer una página que muestre una lista de tareas chequeable y deschequeable. Debe aparecer vacía y
+la usuaria podrá ir añadiendo tareas mediante un formulario oculto, que se mostrará al clicar un botón.
+
+SOLUCIÓN:
+
+-Primera parte-
+
 En React no se puede usar querySelector ni classList; así que, para poder 'togglear' una clase
 hay que hacerlo con variables de estado (NOTA: addEventListener no se usa tampoco).
 
@@ -5,9 +17,6 @@ En este caso, se pretende ocultar el formulario al inicio, abrirlo con un botón
 que se oculta el susodicho botón, y volver a ocultarlo y hacer que aparezca el botón con un segundo botón ("añadir").
 Por tanto, las variables de estado deben estar en <form> y en el botón nueva tarea. Estas variables de estado,
 estarán entre llaves (porque es JSX) y en el className de la etiqueta.
-
-Se puede optimizar usando solo una variable de estado que vaya cambiando de lugar, pero, en este caso,
-estoy siguiendo el ejercicio del profesor y soy nueva en el manejo de React.
 
 Otros momentos en los que se usan variables de estado:
     - input tipo texto: guardar el value.
@@ -26,5 +35,19 @@ variables de estado? Porque su cambio depende de algo que ya es una variable de 
 A continuación, pasaremos al evento del botón. Primero se pondrá un evento onClick, que llamará a una función
 manejadora.
 
-A partir de aquí, el otro vídeo no lo encuentro; ese Excel es un poco caótico. Así que voy a hacer copia y pega
-y a pedir tutoría... :(
+-Segunda parte-
+
+Ahora vamos a controlar los inputs; en cada uno se pone un evento onChange que llame a una función manejadora 
+y un value que tendrá como valor una variable de estado. En este caso, solo hay un input tipo texto.
+    - input de nueva tarea:
+        -- Su variable de estado empieza con un string vacío, ya que no debe aparecer nada inicialmente.
+        -- Su función manejadora sirve para pasar a la variable de estado lo que está escribiendo la usuaria.
+
+Después, pasaremos al botón de guardar. Cuando se clique, se pretende que haga estas cosas:
+    - crear una nueva tarea
+    - borrar el value del input
+    - que se oculte el form y se muestre el botón de añadir tarea
+
+Para crear una nueva tarea, se debe crear un objeto con dos propiedades: task y completed (que inicialmente será false).
+Ese objeto nuevo debe entrar en el array de tareas ("tasks") mediante el set; pero esta función necesita un array
+nuevo, así que vamos a clonar el array tasks.
