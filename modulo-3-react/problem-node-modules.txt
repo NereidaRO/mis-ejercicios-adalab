@@ -1,0 +1,4 @@
+Todos estos ejercicios tienen una carpeta node-modules, que pesa bastante pero es necesaria para que funcione React.
+Para que el ordenador no sufra tanto, esta carpeta será borrada de los ejercicios que estén acabados.
+Quedará una carpeta de este tipo en el último ejercicio que se haga del módulo, la cual sse puede ir trasladando de ejercicio
+en caso de querer que otro funcione.

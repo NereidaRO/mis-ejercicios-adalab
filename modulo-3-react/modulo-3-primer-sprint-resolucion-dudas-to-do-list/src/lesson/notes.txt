@@ -1,0 +1,30 @@
+En React no se puede usar querySelector ni classList; así que, para poder 'togglear' una clase
+hay que hacerlo con variables de estado (NOTA: addEventListener no se usa tampoco).
+
+En este caso, se pretende ocultar el formulario al inicio, abrirlo con un botón ("nueva tarea") a la vez
+que se oculta el susodicho botón, y volver a ocultarlo y hacer que aparezca el botón con un segundo botón ("añadir").
+Por tanto, las variables de estado deben estar en <form> y en el botón nueva tarea. Estas variables de estado,
+estarán entre llaves (porque es JSX) y en el className de la etiqueta.
+
+Se puede optimizar usando solo una variable de estado que vaya cambiando de lugar, pero, en este caso,
+estoy siguiendo el ejercicio del profesor y soy nueva en el manejo de React.
+
+Otros momentos en los que se usan variables de estado:
+    - input tipo texto: guardar el value.
+    - guardar datos de la aplicación: lista de tareas, datos de la API, etc.
+    - cosas que se cambian en el HTML: re-renderizables.
+
+NOTA: sobre los botones; el botón de dentro del formulario va a ser un input tipo button, mientras que el botón
+de "nueva tarea", que está fuera de <form>, es un <button>. Cuando volvamos de vacaciones quiero preguntar por qué.
+
+isFormShown va a ser booleano, entonces, si se muestra el formulario va a ser true y si no se muestra va a ser false.
+Cuando sea false se pondrá la clase hidden al formulario; cuando sea true, se pondrá la clase hidden al botón.
+
+Para ello, usaremos otras dos variables: showButtonClass y showFormClass. Son let porque cambian. ¿Por qué no son
+variables de estado? Porque su cambio depende de algo que ya es una variable de estado (isFormShown).
+
+A continuación, pasaremos al evento del botón. Primero se pondrá un evento onClick, que llamará a una función
+manejadora.
+
+A partir de aquí, el otro vídeo no lo encuentro; ese Excel es un poco caótico. Así que voy a hacer copia y pega
+y a pedir tutoría... :(

@@ -1,0 +1,19 @@
+.hidden{
+    display: none;
+}
+
+.main{
+    &__form{
+        padding: 2%;
+    }
+}
+
+.task{
+    line-height: normal;
+    list-style: none;
+    display: flex;
+
+    &.completed{
+        text-decoration: line-through;
+    }
+}
