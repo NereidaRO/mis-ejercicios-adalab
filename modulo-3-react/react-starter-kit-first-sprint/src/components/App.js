@@ -1,4 +1,6 @@
-import '../styles/App.scss';
+import "../styles/App.scss";
+import { useEffect, useState } from "react";
+import ls from "../services/localStorage";
 
 function App() {
   return (
