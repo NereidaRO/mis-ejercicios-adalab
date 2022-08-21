@@ -1,0 +1,30 @@
+$font-family: 'Rubik', sans-serif;
+$text-menu: #4a4a4a;
+$backg-color: #3CDBC0;
+$title-color: #FFFFFF;
+$backg-header: white;  
+
+.main {
+    background-color: $backg-color;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: $title-color;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media all and (min-width: 768px){
+    .title {
+        font-size: 40px;
+    }
+}

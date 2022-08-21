@@ -1,0 +1,26 @@
+$font-family: 'Rubik', sans-serif;
+$text-menu: #4a4a4a;
+$backg-color: #3CDBC0;
+$title-color: #FFFFFF;
+$backg-header: white;
+
+.ul {
+    color: $text-menu;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 13px;
+    list-style: none;
+}
+.link-nav {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text-menu;
+    padding: 10px;
+}
+
+@media all and (min-width: 768px){
+    .ul {
+        padding-right: 30px;
+    }
+}

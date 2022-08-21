@@ -1,0 +1,31 @@
+$font-family: 'Rubik', sans-serif;
+$text-menu: #4a4a4a;
+$backg-color: #3CDBC0;
+$title-color: #FFFFFF;
+$backg-header: white;
+
+
+body {
+    font-family: $font-family;
+}
+
+.header {
+    min-height: 20vh;
+    width: 100vw;
+    background-color: $backg-header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+@media all and (min-width: 768px) {
+    
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 20px;
+    } 
+}

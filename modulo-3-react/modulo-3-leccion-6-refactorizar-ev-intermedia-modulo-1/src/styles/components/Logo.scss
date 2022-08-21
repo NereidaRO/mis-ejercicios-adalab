@@ -1,0 +1,19 @@
+$font-family: 'Rubik', sans-serif;
+$text-menu: #4a4a4a;
+$backg-color: #3CDBC0;
+$title-color: #FFFFFF;
+$backg-header: white;
+
+.logo {
+    width: 155px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media all and (min-width: 768px){
+    .logo {
+        padding-left: 30px;
+        padding-bottom: 20px;
+        margin: 0;
+    } 
+}
