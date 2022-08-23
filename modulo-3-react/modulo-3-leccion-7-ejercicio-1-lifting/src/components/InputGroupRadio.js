@@ -13,7 +13,7 @@ function InputGroupRadio(props) {
         name="paymentType"
         id={props.inputId}
         value={props.inputValue}
-        checked={props.inputValue === props.inputId}
+        //checked={props.inputValue === props.inputId}
         onChange={handleInputChange}
       />
     </div>
