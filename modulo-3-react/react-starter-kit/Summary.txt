@@ -1,0 +1,31 @@
+¿Qué necesita un proyecto de React?
+
+- librerías: routes, propType, React
+- Componentes (funcionales):
+    -- de un solo uso
+    -- reutilizables (mejor)
+- controlar formularios:
+    -- onSubmit (<form>)
+    -- onChange (<input>, <select>)
+    -- value = {variableDeEstado}
+    -- checked = {variableDeEstadoBooleana} --> checkbox
+- propType
+- defaultProps
+- props, lifting:
+    -- esquema de datos que va a necesitar cada componente
+- a veces, children (ventanas modales, etc.)
+- Routes, Route, NavLink:
+    -- estáticas (siempre)
+    -- dinámicas (a veces, por ejemplo, productos)
+- un archivo de sass (o css) para cada componente (variables.scss se importa en el archivo sass)
+- variables de estado solo en App.js (normalmente)
+- maps "de pintar" (con key) cuando se repitan estructuras (como en listas)
+- servicios: fetch, localStorage
+- que los objetos tengan id (en los maps también se puede usar el index) --> interesante la librería uuid
+- HashBrowser, #/ y npm run githubpages para publicar en GitHub Pages
+- BrowserRouter y / para otros casos
+- testing (si no hay departamento de calidad):
+    -- inputs de los forms
+    -- textos concretos
+    -- rutas 
+    -- etc.

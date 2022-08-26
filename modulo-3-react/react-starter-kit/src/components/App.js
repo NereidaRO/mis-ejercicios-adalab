@@ -1,7 +1,7 @@
 //Estilos (solo 1)
 import "../styles/App.scss";
 //Librerías, datos y LS
-import { Route } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ls from "../services/localStorage";
 //Componentes
@@ -13,7 +13,7 @@ function App() {
   //RETURN
   return (
     <div className="App">
-      <h1>Hola Mundo</h1>
+      <h1>Hola mundo</h1>
     </div>
   );
 }
