@@ -1,0 +1,16 @@
+const express = require("express");
+const cors = require("cors");
+
+const server = express();
+server.use(cors());
+server.use(json());
+
+const serverPort = 4000;
+server.listen(serverPort, () => {console.log(`Server listening at http://localhost${serverPort}`);
+});
+
+/*Configuración base para un servidor:
+- Es un objeto de express
+- Usa cors, para que acepte peticiones de todos lados
+- Responde con datos JSON
+- El puerto es el local 4000*/
