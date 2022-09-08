@@ -21,6 +21,25 @@ server.listen(serverPort, () => {
 
 //endpoints, queries, etc.
 
+//endpoint para sacar todos los artículos
+server.get("/all", (req, res) => {
+  const query = `SELECT * FROM blog`;
+  res.json(query);
+});
+
+server.get("/detail", (req, res) => {
+  const query = `SELECT * FROM blog WHERE id=2`;
+  res.json(query);
+});
+
+server.get("/datos", (req, res) => {
+  const query = `SELECT * FROM blog WHERE title LIKE '%datos%'`;
+  res.json(query);
+});
+/*NOTA: dejando los querys así, al pincharle al enlace, te pone el query tal y como está escrito.
+En sí, funcionan, los datos son los correctos, pero la transformación a algo visible de verdad 
+debería hacerse con un motor de plantillas, React, etc. */
+
 // static server
 const staticServerPath = "./public";
 server.use(express.static(staticServerPath));
